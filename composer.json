@@ -12,7 +12,7 @@
     },
     "autoload": {
         "classmap": ["src/shopdb/"],
-        "psr-4": { "Wifi\\": "src/classes/" }
+        "psr-4": { "Wifi\\": "src/Wifi/" }
     },
     "require-dev": {
         "phing/phing": "dev-master"

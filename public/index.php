@@ -23,6 +23,7 @@ if ($products->count() > 0){
                 <p>EUR %s</p>
                 <form action="" method="post">
                 <input type="hidden" name="prodId" value="%s">
+                <input type="hidden" name="basketAction" value="add">
                 <input type="hidden" name="prodName" valuse="%s">
                 <input type="hidden" name="prodPrice" valuse="%s">
                     <input type="text" name="prodCount" value="0" id="prodCount">

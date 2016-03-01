@@ -61,3 +61,12 @@ Stack trace:
 [01-Mar-2016 20:54:01 Europe/Berlin] PHP Fatal error:  Class 'Wifi\Basket' not found in /var/www/html/esletzbichler_shop/public/index.php on line 12
 [01-Mar-2016 20:54:01 Europe/Berlin] PHP Stack trace:
 [01-Mar-2016 20:54:01 Europe/Berlin] PHP   1. {main}() /var/www/html/esletzbichler_shop/public/index.php:0
+[01-Mar-2016 21:05:49 Europe/Berlin] PHP Fatal error:  Class 'Wifi\Basket' not found in /var/www/html/esletzbichler_shop/public/index.php on line 12
+[01-Mar-2016 21:05:49 Europe/Berlin] PHP Stack trace:
+[01-Mar-2016 21:05:49 Europe/Berlin] PHP   1. {main}() /var/www/html/esletzbichler_shop/public/index.php:0
+[01-Mar-2016 21:13:30 Europe/Berlin] PHP Fatal error:  Class 'Wifi\Basket' not found in /var/www/html/esletzbichler_shop/public/index.php on line 12
+[01-Mar-2016 21:13:30 Europe/Berlin] PHP Stack trace:
+[01-Mar-2016 21:13:30 Europe/Berlin] PHP   1. {main}() /var/www/html/esletzbichler_shop/public/index.php:0
+[01-Mar-2016 21:13:32 Europe/Berlin] PHP Fatal error:  Class 'Wifi\Basket' not found in /var/www/html/esletzbichler_shop/public/index.php on line 12
+[01-Mar-2016 21:13:32 Europe/Berlin] PHP Stack trace:
+[01-Mar-2016 21:13:32 Europe/Berlin] PHP   1. {main}() /var/www/html/esletzbichler_shop/public/index.php:0

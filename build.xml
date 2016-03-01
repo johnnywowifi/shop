@@ -53,7 +53,7 @@
     </target>
     
     <target name="composer_dumpautoload">
-        <exec command="dir" dir="${path.project}" logoutput="true"/>
+        <exec command="composer dumpautoload" dir="${path.project}" logoutput="true"/>
         <echo message="refresh autoload"/>
     </target>
 
