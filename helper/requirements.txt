@@ -1,0 +1,15 @@
+Unser Shop
+==========
+
+Features:
+1.1.1.1 Standardseiten wie Impressum, Kontakt, AGB
+
+Kategorien
+1.2.1.1 Ich möchte, dass ein Shopuser über Tags die zugehörigen Artikel aufgelistet bekommt
+1.2.1.2 Ich möchte, dass ein Artikel mehreren Kategorien/Tags zugeordnet werden kann
+
+Artikel
+Warenkorb
+Registrieren
+Login
+

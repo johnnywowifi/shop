@@ -1,0 +1,63 @@
+[18-Feb-2016 21:24:12 Europe/Berlin] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'susu@example.com' for key 'us_email'' in /var/www/html/esletzbichler_shop/vendor/propel/propel/src/Propel/Runtime/Adapter/Pdo/PdoStatement.php:57
+Stack trace:
+#0 /var/www/html/esletzbichler_shop/vendor/propel/propel/src/Propel/Runtime/Adapter/Pdo/PdoStatement.php(57): PDOStatement->execute(NULL)
+#1 /var/www/html/esletzbichler_shop/vendor/propel/propel/src/Propel/Runtime/Connection/StatementWrapper.php(194): Propel\Runtime\Adapter\Pdo\PdoStatement->execute(NULL)
+#2 /var/www/html/esletzbichler_shop/src/shopdb/Base/User.php(728): Propel\Runtime\Connection\StatementWrapper->execute()
+#3 /var/www/html/esletzbichler_shop/src/shopdb/Base/User.php(661): Base\User->doInsert(Object(Propel\Runtime\Connection\ConnectionWrapper))
+#4 /var/www/html/esletzbichler_shop/src/shopdb/Base/User.php(625): Base\User->doSave(Object(Propel\Runtime\Connection\ConnectionWrapper))
+#5 [internal function]: Base\User->Base\ in /var/www/html/esletzbichler_shop/src/shopdb/Base/User.php on line 731
+[23-Feb-2016 18:12:21 Europe/Berlin] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2002] Connection refused' in /var/www/html/esletzbichler_shop/vendor/propel/propel/src/Propel/Runtime/Connection/PdoConnection.php:49
+Stack trace:
+#0 /var/www/html/esletzbichler_shop/vendor/propel/propel/src/Propel/Runtime/Connection/PdoConnection.php(49): PDO->__construct('mysql:host=10.1...', 'root', '', Array)
+#1 /var/www/html/esletzbichler_shop/vendor/propel/propel/src/Propel/Runtime/Adapter/Pdo/PdoAdapter.php(70): Propel\Runtime\Connection\PdoConnection->__construct('mysql:host=10.1...', 'root', '', Array)
+#2 /var/www/html/esletzbichler_shop/vendor/propel/propel/src/Propel/Runtime/Connection/ConnectionFactory.php(41): Propel\Runtime\Adapter\Pdo\PdoAdapter->getConnection(Array)
+#3 /var/www/html/esletzbichler_shop/vendor/propel/propel/src/Propel/Runtime/Connection/ConnectionManagerSingle.php(76): Propel\Runtime\Connection\ConnectionFactory::create(Array, Object(Propel\Runtime\Adapter\Pdo\MysqlAdapter))
+#4 /var/www/html/esletzbichler_shop/vend in /var/www/html/esletzbichler_shop/vendor/propel/propel/src/Propel/Runtime/Connection/ConnectionFactory.php on line 43
+[23-Feb-2016 20:46:42 Europe/Berlin] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'ubuntu' for key 'us_name'' in /var/www/html/esletzbichler_shop/vendor/propel/propel/src/Propel/Runtime/Adapter/Pdo/PdoStatement.php:57
+Stack trace:
+#0 /var/www/html/esletzbichler_shop/vendor/propel/propel/src/Propel/Runtime/Adapter/Pdo/PdoStatement.php(57): PDOStatement->execute(NULL)
+#1 /var/www/html/esletzbichler_shop/vendor/propel/propel/src/Propel/Runtime/Connection/StatementWrapper.php(194): Propel\Runtime\Adapter\Pdo\PdoStatement->execute(NULL)
+#2 /var/www/html/esletzbichler_shop/src/shopdb/Base/User.php(728): Propel\Runtime\Connection\StatementWrapper->execute()
+#3 /var/www/html/esletzbichler_shop/src/shopdb/Base/User.php(661): Base\User->doInsert(Object(Propel\Runtime\Connection\ConnectionWrapper))
+#4 /var/www/html/esletzbichler_shop/src/shopdb/Base/User.php(625): Base\User->doSave(Object(Propel\Runtime\Connection\ConnectionWrapper))
+#5 [internal function]: Base\User->Base\{closure}() in /var/www/html/esletzbichler_shop/src/shopdb/Base/User.php on line 731
+[25-Feb-2016 20:24:59 Europe/Berlin] PHP Fatal error:  require_once(): Failed opening required '/var/www/html/esletzbichler_shopsrc/template/header.php' (include_path='/var/www/html/esletzbichler_shop/vendor/phing/phing/classes:.:/usr/share/php:/usr/share/pear') in /var/www/html/esletzbichler_shop/public/index.php on line 4
+[25-Feb-2016 20:24:59 Europe/Berlin] PHP Stack trace:
+[25-Feb-2016 20:24:59 Europe/Berlin] PHP   1. {main}() /var/www/html/esletzbichler_shop/public/index.php:0
+[25-Feb-2016 20:25:45 Europe/Berlin] PHP Fatal error:  require_once(): Failed opening required '/var/www/html/esletzbichler_shopsrc/template/header.php' (include_path='/var/www/html/esletzbichler_shop/vendor/phing/phing/classes:.:/usr/share/php:/usr/share/pear') in /var/www/html/esletzbichler_shop/public/index.php on line 4
+[25-Feb-2016 20:25:45 Europe/Berlin] PHP Stack trace:
+[25-Feb-2016 20:25:45 Europe/Berlin] PHP   1. {main}() /var/www/html/esletzbichler_shop/public/index.php:0
+[25-Feb-2016 20:25:46 Europe/Berlin] PHP Fatal error:  require_once(): Failed opening required '/var/www/html/esletzbichler_shopsrc/template/header.php' (include_path='/var/www/html/esletzbichler_shop/vendor/phing/phing/classes:.:/usr/share/php:/usr/share/pear') in /var/www/html/esletzbichler_shop/public/index.php on line 4
+[25-Feb-2016 20:25:46 Europe/Berlin] PHP Stack trace:
+[25-Feb-2016 20:25:46 Europe/Berlin] PHP   1. {main}() /var/www/html/esletzbichler_shop/public/index.php:0
+[25-Feb-2016 20:34:37 Europe/Berlin] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'product.productcol' in 'field list'' in /var/www/html/esletzbichler_shop/vendor/propel/propel/src/Propel/Runtime/Adapter/Pdo/PdoStatement.php:57
+Stack trace:
+#0 /var/www/html/esletzbichler_shop/vendor/propel/propel/src/Propel/Runtime/Adapter/Pdo/PdoStatement.php(57): PDOStatement->execute(NULL)
+#1 /var/www/html/esletzbichler_shop/vendor/propel/propel/src/Propel/Runtime/Connection/StatementWrapper.php(194): Propel\Runtime\Adapter\Pdo\PdoStatement->execute(NULL)
+#2 /var/www/html/esletzbichler_shop/vendor/propel/propel/src/Propel/Runtime/ActiveQuery/Criteria.php(2644): Propel\Runtime\Connection\StatementWrapper->execute()
+#3 /var/www/html/esletzbichler_shop/vendor/propel/propel/src/Propel/Runtime/ActiveQuery/ModelCriteria.php(1988): Propel\Runtime\ActiveQuery\Criteria->doSelect(Object(Propel\Runtime\Connection\ConnectionWrapper))
+#4 /var/www/html/esletzbichler_shop/vendor/propel/propel/src/Propel/Runtime/Activ in /var/www/html/esletzbichler_shop/vendor/propel/propel/src/Propel/Runtime/ActiveQuery/Criteria.php on line 2650
+[25-Feb-2016 20:35:52 Europe/Berlin] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'product.productcol' in 'field list'' in /var/www/html/esletzbichler_shop/vendor/propel/propel/src/Propel/Runtime/Adapter/Pdo/PdoStatement.php:57
+Stack trace:
+#0 /var/www/html/esletzbichler_shop/vendor/propel/propel/src/Propel/Runtime/Adapter/Pdo/PdoStatement.php(57): PDOStatement->execute(NULL)
+#1 /var/www/html/esletzbichler_shop/vendor/propel/propel/src/Propel/Runtime/Connection/StatementWrapper.php(194): Propel\Runtime\Adapter\Pdo\PdoStatement->execute(NULL)
+#2 /var/www/html/esletzbichler_shop/vendor/propel/propel/src/Propel/Runtime/ActiveQuery/Criteria.php(2644): Propel\Runtime\Connection\StatementWrapper->execute()
+#3 /var/www/html/esletzbichler_shop/vendor/propel/propel/src/Propel/Runtime/ActiveQuery/ModelCriteria.php(1988): Propel\Runtime\ActiveQuery\Criteria->doSelect(Object(Propel\Runtime\Connection\ConnectionWrapper))
+#4 /var/www/html/esletzbichler_shop/vendor/propel/propel/src/Propel/Runtime/Activ in /var/www/html/esletzbichler_shop/vendor/propel/propel/src/Propel/Runtime/ActiveQuery/Criteria.php on line 2650
+[25-Feb-2016 20:35:57 Europe/Berlin] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'product.productcol' in 'field list'' in /var/www/html/esletzbichler_shop/vendor/propel/propel/src/Propel/Runtime/Adapter/Pdo/PdoStatement.php:57
+Stack trace:
+#0 /var/www/html/esletzbichler_shop/vendor/propel/propel/src/Propel/Runtime/Adapter/Pdo/PdoStatement.php(57): PDOStatement->execute(NULL)
+#1 /var/www/html/esletzbichler_shop/vendor/propel/propel/src/Propel/Runtime/Connection/StatementWrapper.php(194): Propel\Runtime\Adapter\Pdo\PdoStatement->execute(NULL)
+#2 /var/www/html/esletzbichler_shop/vendor/propel/propel/src/Propel/Runtime/ActiveQuery/Criteria.php(2644): Propel\Runtime\Connection\StatementWrapper->execute()
+#3 /var/www/html/esletzbichler_shop/vendor/propel/propel/src/Propel/Runtime/ActiveQuery/ModelCriteria.php(1988): Propel\Runtime\ActiveQuery\Criteria->doSelect(Object(Propel\Runtime\Connection\ConnectionWrapper))
+#4 /var/www/html/esletzbichler_shop/vendor/propel/propel/src/Propel/Runtime/Activ in /var/www/html/esletzbichler_shop/vendor/propel/propel/src/Propel/Runtime/ActiveQuery/Criteria.php on line 2650
+[25-Feb-2016 20:35:59 Europe/Berlin] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'product.productcol' in 'field list'' in /var/www/html/esletzbichler_shop/vendor/propel/propel/src/Propel/Runtime/Adapter/Pdo/PdoStatement.php:57
+Stack trace:
+#0 /var/www/html/esletzbichler_shop/vendor/propel/propel/src/Propel/Runtime/Adapter/Pdo/PdoStatement.php(57): PDOStatement->execute(NULL)
+#1 /var/www/html/esletzbichler_shop/vendor/propel/propel/src/Propel/Runtime/Connection/StatementWrapper.php(194): Propel\Runtime\Adapter\Pdo\PdoStatement->execute(NULL)
+#2 /var/www/html/esletzbichler_shop/vendor/propel/propel/src/Propel/Runtime/ActiveQuery/Criteria.php(2644): Propel\Runtime\Connection\StatementWrapper->execute()
+#3 /var/www/html/esletzbichler_shop/vendor/propel/propel/src/Propel/Runtime/ActiveQuery/ModelCriteria.php(1988): Propel\Runtime\ActiveQuery\Criteria->doSelect(Object(Propel\Runtime\Connection\ConnectionWrapper))
+#4 /var/www/html/esletzbichler_shop/vendor/propel/propel/src/Propel/Runtime/Activ in /var/www/html/esletzbichler_shop/vendor/propel/propel/src/Propel/Runtime/ActiveQuery/Criteria.php on line 2650
+[01-Mar-2016 20:54:01 Europe/Berlin] PHP Fatal error:  Class 'Wifi\Basket' not found in /var/www/html/esletzbichler_shop/public/index.php on line 12
+[01-Mar-2016 20:54:01 Europe/Berlin] PHP Stack trace:
+[01-Mar-2016 20:54:01 Europe/Berlin] PHP   1. {main}() /var/www/html/esletzbichler_shop/public/index.php:0

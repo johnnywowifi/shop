@@ -1,0 +1,20 @@
+{
+    "name": "vendor/esletzbichler-shop",
+    "description": "Description of project esletzbichler_shop.",
+    "authors": [
+        {
+            "name": "EsletzbichlerE",
+            "email": "your@email.here"
+        }
+    ],
+    "require": {
+        "propel/propel": "dev-master"
+    },
+    "autoload": {
+        "classmap": ["src/shopdb/"],
+        "psr-4": { "Wifi\\": "src/classes/" }
+    },
+    "require-dev": {
+        "phing/phing": "dev-master"
+    }
+}

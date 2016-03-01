@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model 
+    xlink:href="vendor/phing/phing/etc/phing-grammar.rng"
+    type="application/xml"
+    schematypens="http://relaxng.org/ns/structure/1.0" ?>
+<project name="esletzbichler_shop" default="docs" basedir="." >
+
+    <property name="path.propel" value="W:/esletzbichler_shop/src/shopdb" override="yes"/>
+    <property name="path.sql" value="W:/esletzbichler_shop/helper" override="yes"/>
+    <property name="path.project" value="W:/esletzbichler_shop" override="yes"/>
+    <property name="mysql.user" value="root" override="yes"/>
+    <property name="mysql.pass" value="" override="yes"/>
+    <property name="mysql.host" value="10.133.2.206" override="yes"/>
+    <property name="mysql.db" value="esletzbichler_shop" override="yes"/>
+    
+    <target name="propel_build_model">
+        <echo message="build models"/>
+        <exec command="propel model:build" dir="${path.propel}" logoutput="true"/>
+        <!--<phingCall task="composer_dumpautoload"/>-->
+    </target>
+    
+    <target name="propel_build_sql">
+        <echo message="build sql"/>
+        <exec command="propel sql:build" dir="${path.propel}" logoutput="true"/>
+    </target>
+    
+    <target name="propel_config_convert">
+        <echo message="build/convert config"/>
+        <exec command="propel config:convert" dir="${path.propel}" logoutput="true"/>
+    </target>
+    
+    <target name="propel_build" depends="propel_build_sql,propel_build_model,propel_config_convert">
+        <echo message="Build all propel targets"/>
+    </target>
+    
+    <target name="propel_reverse" depends="">
+        <echo message="Reverse build propel schema.xml in generated-reversed-database dir"/>
+        <exec command="propel reverse" dir="${path.propel}" logoutput="true"/>
+    </target>
+    
+    <target name="propel_reverse_replace_schema" depends="propel_reverse">
+        <move file="${path.propel}\generated-reversed-database\schema.xml" tofile="${path.propel}\schema.xml" overwrite="true"/>
+        <!--<delete dir="${path.propel}\generated-reversed-database" includeemptydirs="true" verbose="true" failonerror="true" />-->
+    </target>
+    
+    <target name="reinitDB">
+        <pdosqlexec url="mysql:host=${mysql.host};dbname=${mysql.db};charset=utf8" 
+                    userid="${mysql.user}" password="${mysql.pass}">
+            <transaction src="${path.sql}/init.sql"/>
+            <transaction src="${path.sql}/data.sql"/>
+            <formatter type="plain" usefile="false"/>
+        </pdosqlexec>
+    </target>
+    
+    <target name="composer_dumpautoload">
+        <exec command="dir" dir="${path.project}" logoutput="true"/>
+        <echo message="refresh autoload"/>
+    </target>
+
+    <target name="clean" depends="reinitDB">
+        <echo message="Full clean"/>
+    </target>
+
+</project>
