@@ -19,4 +19,5 @@ if($action === 'add') {
     $basket->addProduct($basketProduct);
     $basket->save();
 }
+var_dump($_SESSION);
 

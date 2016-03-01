@@ -21,7 +21,7 @@ if ($products->count() > 0){
         printf('<h2>%s</h2>
                 <p>%s</p>
                 <p>EUR %s</p>
-                <form action="" method="post">
+                <form action="manageBasket.php" method="post">
                 <input type="hidden" name="prodId" value="%s">
                 <input type="hidden" name="basketAction" value="add">
                 <input type="hidden" name="prodName" valuse="%s">
