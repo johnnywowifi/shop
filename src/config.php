@@ -12,7 +12,7 @@ ini_set("error_log", PATHAPP . "/log/error.log");
 
 if(ENV === "development") {
     error_reporting(E_ALL);
-    ini_set('display_errors', "On");
+    ini_set('display_errors', 1);
 } else {
     ini_set('display_errors', "Off");
 }

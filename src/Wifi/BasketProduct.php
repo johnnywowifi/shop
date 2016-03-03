@@ -28,8 +28,33 @@ class BasketProduct {
         return $this->amount;
     }
 
-    public function getPrice() {
-        return $this->price;
+    public function getPrice($locale = 'en') {
+        $price = $this->price;
+        switch ($locale) {
+            case 'de':
+                $price = number_format($this->price, 2, ',', '.');
+                break;
+
+            default:
+                $price = $this->price;
+                break;
+        }
+        return $price;
+    }
+    
+    public function getTotal($locale = 'en') 
+    {
+        $total = $this->price * $this->amount;
+        switch ($locale) {
+            case 'de':
+                $total = number_format($total, 2, ',', '.');
+                break;
+
+            default:
+                $total = $total;
+                break;
+        }
+        return $total;
     }
 
     public function getId() {

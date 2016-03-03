@@ -33,11 +33,21 @@ class Basket {
         return $amount;
     }
     
-    public function getTotalSum() 
+    public function getTotalSum($locale = 'en') 
     {
         $sum = 0;
         foreach($this->products as $product) {
             $sum += $product->getAmount() * $product->getPrice();
+        }
+        switch ($locale) {
+            case 'de':
+                $sum = number_format($sum, 2, ',', '.');
+                break;
+            case 'en':
+                $sum = number_format($sum, 2, '.', ',');
+                break;
+            default:
+                throw new \InvalidArgumentException($locale . ' is not implemented');
         }
         return $sum;
         
@@ -69,7 +79,7 @@ class Basket {
     
     public function restore() 
     {
-        if(!isset($_SESSION['basket']['products']) and is_array($_SESSION['basket']['products'])) {
+        if(isset($_SESSION['basket']['products']) and is_array($_SESSION['basket']['products'])) {
             $this->setProducts($_SESSION['basket']['products']);
         }
     }

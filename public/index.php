@@ -9,7 +9,7 @@
 
 <h1>Produkte</h1>
 <?php
-$x = new Wifi\Basket();
+//$x = new Wifi\Basket();
 $cId = filter_input(INPUT_GET, 'cId', FILTER_VALIDATE_INT);
 if ($cId){
     $products = Base\ProductQuery::create()->findByCategoryId($cId);
@@ -24,8 +24,8 @@ if ($products->count() > 0){
                 <form action="manageBasket.php" method="post">
                 <input type="hidden" name="prodId" value="%s">
                 <input type="hidden" name="basketAction" value="add">
-                <input type="hidden" name="prodName" valuse="%s">
-                <input type="hidden" name="prodPrice" valuse="%s">
+                <input type="hidden" name="prodName" value="%s">
+                <input type="hidden" name="prodPrice" value="%s">
                     <input type="text" name="prodCount" value="0" id="prodCount">
                     mal in den 
                     <input type="submit" name="prodIntoBasket" value="Warenkorb">

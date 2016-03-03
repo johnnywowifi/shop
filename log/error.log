@@ -70,3 +70,9 @@ Stack trace:
 [01-Mar-2016 21:13:32 Europe/Berlin] PHP Fatal error:  Class 'Wifi\Basket' not found in /var/www/html/esletzbichler_shop/public/index.php on line 12
 [01-Mar-2016 21:13:32 Europe/Berlin] PHP Stack trace:
 [01-Mar-2016 21:13:32 Europe/Berlin] PHP   1. {main}() /var/www/html/esletzbichler_shop/public/index.php:0
+[03-Mar-2016 20:57:12 Europe/Berlin] PHP Fatal error:  Call to undefined function getTotalsum() in /var/www/html/esletzbichler_shop/public/showBasket.php on line 48
+[03-Mar-2016 20:57:12 Europe/Berlin] PHP Stack trace:
+[03-Mar-2016 20:57:12 Europe/Berlin] PHP   1. {main}() /var/www/html/esletzbichler_shop/public/showBasket.php:0
+[03-Mar-2016 20:58:13 Europe/Berlin] PHP Fatal error:  Call to undefined method Wifi\BasketProduct::getTotalsum() in /var/www/html/esletzbichler_shop/public/showBasket.php on line 48
+[03-Mar-2016 20:58:13 Europe/Berlin] PHP Stack trace:
+[03-Mar-2016 20:58:13 Europe/Berlin] PHP   1. {main}() /var/www/html/esletzbichler_shop/public/showBasket.php:0

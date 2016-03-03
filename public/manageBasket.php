@@ -18,6 +18,20 @@ if($action === 'add') {
     $basket->restore();
     $basket->addProduct($basketProduct);
     $basket->save();
+
+    header('Location: showBasket.php');
 }
-var_dump($_SESSION);
+
+if($action === 'remove') {
+    $itemId = filter_input(INPUT_POST, 'prodItemId', FILTER_VALIDATE_INT);
+    
+    $basket = new Wifi\Basket();
+    $basket->restore();
+    $basket->removeProduct($itemId);
+    $basket->save();
+
+    header('Location: showBasket.php');
+}
+
+
 
