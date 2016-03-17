@@ -49,4 +49,11 @@ class Messagelist {
     {
         return $this->data;
     }
+    
+    public function hasMessages() {
+        if(count($this->data) > 0) {
+            return true;
+        }
+        return false;
+    }
 }
