@@ -76,3 +76,6 @@ Stack trace:
 [03-Mar-2016 20:58:13 Europe/Berlin] PHP Fatal error:  Call to undefined method Wifi\BasketProduct::getTotalsum() in /var/www/html/esletzbichler_shop/public/showBasket.php on line 48
 [03-Mar-2016 20:58:13 Europe/Berlin] PHP Stack trace:
 [03-Mar-2016 20:58:13 Europe/Berlin] PHP   1. {main}() /var/www/html/esletzbichler_shop/public/showBasket.php:0
+[17-Mar-2016 20:39:22 Europe/Berlin] PHP Fatal error:  Call to a member function getName() on a non-object in /var/www/html/esletzbichler_shop/public/address.php on line 9
+[17-Mar-2016 20:39:22 Europe/Berlin] PHP Stack trace:
+[17-Mar-2016 20:39:22 Europe/Berlin] PHP   1. {main}() /var/www/html/esletzbichler_shop/public/address.php:0

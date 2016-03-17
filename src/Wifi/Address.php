@@ -14,13 +14,13 @@ namespace Wifi;
  * @author EsletzbichlerE
  */
 class Address {
-    private $address;
+    private $name;
     private $postal;
     private $city;
-    private $country;
+    private $street;
             
-    public function getAddress() {
-        return $this->address;
+    public function getName() {
+        return $this->name;
     }
 
     public function getPostal() {
@@ -31,12 +31,12 @@ class Address {
         return $this->city;
     }
 
-    public function getCountry() {
-        return $this->country;
+    public function getStreet() {
+        return $this->street;
     }
 
-    public function setAddress($address) {
-        $this->address = $address;
+    public function setName($name) {
+        $this->name = $name;
         return $this;
     }
 
@@ -50,9 +50,31 @@ class Address {
         return $this;
     }
 
-    public function setCountry($country) {
-        $this->country = $country;
+    public function setStreet($street) {
+        $this->street = $street;
         return $this;
+    }
+    
+    public function getAdressInfo() {
+        $_SESSION['getAddressInfo'] = $this;
+        return $this;
+                
+    }
+    
+    public function save()
+    {
+        $SESSION['Address']['Name'] = $this->getName();
+        $SESSION['Address']['Street'] = $this->getStreet();
+        $SESSION['Address']['PLZ'] = $this->getPostal();
+        $SESSION['Address']['Ort'] = $this->getCity();
+        
+    }
+    
+    public function restore() 
+    {
+        if(isset($_SESSION['basket']['products']) and is_array($_SESSION['basket']['products'])) {
+            $this->setProducts($_SESSION['basket']['products']);
+        }
     }
 
 

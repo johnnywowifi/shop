@@ -47,6 +47,7 @@
         <td>&nbsp;</td>
     </tr>
 </table>
+<a href="address.php"><button>jetzt bezahlen</button></a>
 
 <?php require_once(PATHTEMPLATE . '/footer.php'); ?>
 
